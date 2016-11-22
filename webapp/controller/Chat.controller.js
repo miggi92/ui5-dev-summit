@@ -24,7 +24,7 @@ sap.ui.define([
       this.setModel(this._historyModel, "hist");
 
       this._socket = new SapPcpWebSocket(
-        "wss://is76as11.dc.hn.de.kaufland:44376/sap/bc/apc/sap/z_ds_chat_server?sap-client=800");
+        "/sap/bc/apc/sap/z_ds_chat_server?sap-client=800");
       this._socket.attachOpen(this, function() {
         MessageToast.show("Connection open");
       }, this);
