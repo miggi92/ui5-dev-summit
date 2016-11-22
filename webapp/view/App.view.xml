@@ -1,0 +1,4 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	controllerName="com.kaufland.summit.controller.App" displayBlock="true">
+	<App id="app" />
+</mvc:View>

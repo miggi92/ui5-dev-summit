@@ -1,0 +1,16 @@
+<mvc:View controllerName="com.kaufland.summit.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:custom="com.kaufland.summit.control">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<FlexBox height="100%" alignItems="Center" justifyContent="Center">
+						<items>
+							<custom:LoginForm id="test" loginPress="onLoginButtonPress"/>
+						</items>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
