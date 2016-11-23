@@ -11,11 +11,6 @@ sap.ui.define([
      * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
      * @memberOf com.kaufland.summit.controller.App
      */
-    onInit: function() {
-      this._viewModel = new JSONModel({
-        userName: ""
-      });
-      this.setModel(this._viewModel, "appModel");
-    }
+    onInit: function() {}
   });
 });

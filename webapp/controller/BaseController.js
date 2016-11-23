@@ -14,7 +14,6 @@ sap.ui.define([
         .getRouter();
     },
 
-
     /**
      * Convinience function to bind a model to the view.
      * @param {model} model The model.
@@ -33,8 +32,13 @@ sap.ui.define([
      * @memberOf com.kaufland.summit.controller.BaseController
      */
     getModel: function(modelName) {
-      return this.getView()
+      var model;
+
+      model = this.getView().getModel(modelName) 
+      || this.getOwnerComponent()
         .getModel(modelName);
+
+      return model;
     },
 
     /**
