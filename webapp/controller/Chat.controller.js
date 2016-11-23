@@ -20,7 +20,7 @@ sap.ui.define([
     onInit: function() {
       this._chatHistory = [
         //	{
-        //  msg: "Hello World",
+        //  msg: "Hello World", 
         //  author: "Developer Summit"
         //}
       ];
