@@ -75,7 +75,7 @@ sap.ui.define([
      */
     _attachMessageCallback: function(event) {
       var message = {};
-      MessageToast.show("Todo");
+      MessageToast.show("todo");
     }
   });
 });
