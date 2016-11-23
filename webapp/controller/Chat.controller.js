@@ -14,7 +14,7 @@ sap.ui.define([
      * messages.
      * 
      * The socket opening process requires the name of the current user. It can be passed via the
-     * name parameter >> &name='' <<
+     * name parameter >> &name=<UserName> <<
      * @memberOf com.kaufland.summit.controller.Chat
      */
     onInit: function() {
