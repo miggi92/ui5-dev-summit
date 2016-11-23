@@ -10,7 +10,7 @@ sap.ui.define([
      * @memberOf com.kaufland.summit.controller.BaseController
      */
     getRouter: function() {
-      return this.getOwningComponent()
+      return this.getOwnerComponent()
         .getRouter();
     },
 
@@ -34,8 +34,8 @@ sap.ui.define([
     getModel: function(modelName) {
       var model;
 
-      model = this.getView().getModel(modelName) 
-      || this.getOwnerComponent()
+      model = this.getView()
+        .getModel(modelName) || this.getOwnerComponent()
         .getModel(modelName);
 
       return model;
@@ -45,9 +45,17 @@ sap.ui.define([
      * @returns {string} The Username entered on the login screen.
      * @memberOf com.kaufland.summit.controller.BaseController
      */
-    getAuthorName: function() {
+    getUserName: function() {
       return this.getModel("appModel")
         .getProperty("/userName");
+    },
+
+    /**
+     * @returns {boolean} Whether the username is set or not.
+     * @memberOf com.kaufland.summit.controller.BaseController
+     */
+    isAppInitialized: function() {
+      return this.getUserName() !== "";
     },
 
     /**
@@ -57,7 +65,9 @@ sap.ui.define([
      * @param {string} name UserName
      * @memberOf com.kaufland.summit.controller.BaseController
      */
-    setAuthorName: function(name) {
+      setUserName: function(name) {
+      	
+      	this.getModel("appModel").setProperty("/userName", name);
 
     }
 

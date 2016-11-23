@@ -26,7 +26,6 @@ sap.ui.define([
      */
     onLoginButtonPress: function(event) {
       MessageToast.show("todo");
-
       // Navigation can be done with the sap.m.Router class.
       // Possible routes can be found in the manifest.json.
       // Routes are identified with a route name.
