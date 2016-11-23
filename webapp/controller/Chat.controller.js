@@ -10,7 +10,11 @@ sap.ui.define([
 
     /**
      * Called when a controller is instantiated and its View controls (if available) are already created.
-     * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+     * This function opens the socket connection and registers the callback function to handle incoming
+     * messages.
+     * 
+     * The socket opening process requires the name of the current user. It can be passed via the
+     * name parameter >> &name='' <<
      * @memberOf com.kaufland.summit.controller.Chat
      */
     onInit: function() {
