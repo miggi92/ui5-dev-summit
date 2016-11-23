@@ -69,18 +69,13 @@ sap.ui.define([
      * This function is executed each time an object is received via the socket connection.
      * We need to extract the message details and insert the message object into our chat history.
      * 
-     * @param {event} event Message containing author, timestamp and the msg itselfe
-     * @param {prop} prop asd
+     * @param {event} event Message containing pcpFields and transmitted data
      * @private
      * @memberOf com.kaufland.summit.controller.Chat
      */
-    _attachMessageCallback: function(event, prop) {
+    _attachMessageCallback: function(event) {
       var message = {};
-      MessageToast.show(event.getParameter("data"));
-      message.author = event.getParameter("pcpFields")
-        .name;
-      message.msg = event.getParameter("data");
-      this._appendChatMessage(message);
+      MessageToast.show("Todo");
     }
   });
 });
