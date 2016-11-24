@@ -10,6 +10,6 @@
 			</content>
 		</ScrollContainer>
 		<!-- Place FeedInput here -->
-		<!-- 	<FeedInput post="onPost" showIcon="false"/>  -->
+		<FeedInput post="onPost" showIcon="false"/> 
 	</Page>
 </mvc:View>

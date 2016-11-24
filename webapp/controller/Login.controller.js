@@ -25,10 +25,14 @@ sap.ui.define([
      * @memberOf com.kaufland.summit.controller.Login
      */
     onLoginButtonPress: function(event) {
-      MessageToast.show("todo");
       // Navigation can be done with the sap.m.Router class.
       // Possible routes can be found in the manifest.json.
       // Routes are identified with a route name.
+      var oUsername = event.getParameters().value;
+      this.setUserName(oUsername);
+
+      this.getRouter()
+        .navTo("chat");
     }
   });
 });
