@@ -33,11 +33,13 @@ sap.ui.define([
      * @memberOf com.kaufland.summit.controller.Chat
      */
     onPost: function(event) {
+    	
       var message = {
-        author: "",
-        msg: ""
+        author: this.getUserName(),
+        msg: event.getParameters().value
       };
-      MessageToast.show("todo");
+      
+      this._socket.send(message, this.getUserName() );
     },
 
     /**
@@ -62,7 +64,8 @@ sap.ui.define([
      * @memberOf com.kaufland.summit.controller.Chat
      */
     _attachMessageCallback: function(event) {
-      var message = {};
+      var message = event.getParameters().value;
+      this._appendChatMessage(message);
       MessageToast.show("todo");
     },
 
@@ -77,7 +80,7 @@ sap.ui.define([
      */
     _openSocketConnection: function() {
       this._socket = new SapPcpWebSocket(
-        "/sap/bc/apc/sap/z_ds_chat_server?sap-client=800");
+        "wss://is76as11.dc.hn.de.kaufland:8076/sap/bc/apc/sap/z_ds_chat_server?sap-client=800&name=" + this.getUserName() );
       this._socket.attachOpen(this, function() {
         MessageToast.show("Connection open");
       }, this);
